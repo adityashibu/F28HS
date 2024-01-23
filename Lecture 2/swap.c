@@ -2,13 +2,11 @@
 
 // a = 3, b = 2
 
-void swap(int a, int b)
+void swap(int *a, int *b)
 {
-    a = a + b; // 5
-    b = a - b; // 3
-    a = a - b; // 2
-
-    return a, b;
+    *a = *a + *b; // 5
+    *b = *a - *b; // 3
+    *a = *a - *b; // 2
 }
 
 int main(int argc, char **argv)
@@ -21,7 +19,7 @@ int main(int argc, char **argv)
     printf("Enter num2: ");
     scanf("%d", &num2);
 
-    swap(num1, num2);
+    swap(&num1, &num2);
 
-    printf("num1 is now: %d, num2 is now %d", );
+    printf("num1 is now: %d, num2 is now %d \n", num1, num2);
 }
