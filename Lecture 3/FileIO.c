@@ -26,6 +26,12 @@ int main(int argc, char *argv[])
 
     */
 
+    if (argc != 3)
+    {
+        printf("Wrong number of arguments \n");
+        exit(0);
+    }
+
     FILE *fIn, *fOut;
     fIn = fopen("test.txt", "r");
 
